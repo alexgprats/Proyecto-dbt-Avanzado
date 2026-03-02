@@ -18,7 +18,6 @@ models:
               to: ref('dim_customers')
               field: customer_id
 
-      # Estas son las claves foráneas adicionales que pide el reto para validar el modelo estrella
       - name: pieza_ejemplo
         description: "Referencia a la pieza principal del pedido."
         tests:
@@ -39,7 +38,7 @@ models:
         description: "Suma total del precio de todas las líneas del pedido (importe_bruto)."
 
       - name: categoria_venta
-        description: "Campo calculado mediante macro. Clasificación: 'High Value' si > 150,000, de lo contrario 'Standard'."
+        description: "Campo calculado mediante macro."
 
   - name: dim_customers
     description: "Tabla maestra de clientes con datos limpios y segmentados."

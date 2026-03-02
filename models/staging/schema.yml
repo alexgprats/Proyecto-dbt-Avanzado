@@ -16,7 +16,7 @@ models:
               values: ['F', 'O', 'P']
 
   - name: stg_customers
-    description: "Listado de clientes limpios"
+    description: "Listado de clientes"
     columns:
       - name: customer_id
         tests:

@@ -2,8 +2,9 @@ version: 2
 
 models:
   - name: int_pedidos_clientes
-    description: "Unión de pedidos con información de clientes para análisis intermedio"
+    description: "Unión de pedidos"
     columns:
       - name: order_id
         tests:
           - unique
+          - not_null
