@@ -7,58 +7,67 @@ models:
       - name: order_id
         tests:
           - unique:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
           - not_null:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
+          # Verifica que la columna realmente existe en el modelo
+          - dbt_expectations.expect_column_to_exist:
+              config: {tags: ['business_package']}
 
       - name: customer_id
         tests:
           - not_null:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
           - relationships:
               to: ref('dim_customers')
               field: customer_id
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
+
+      - name: importe_total
+        tests:
+          - not_null:
+              config: {tags: ['business_package']}
+          # Verifica que sea positivo
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              config: {tags: ['business_package']}
+          # Verifica que el tipo de dato sea FLOAT 
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: float
+              config: {tags: ['business_package']}
 
       - name: pieza_ejemplo
         tests:
           - not_null:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
+          # NUEVO: Verifica que al menos un valor de esta columna sea NOT NULL
+          - dbt_expectations.expect_column_at_least_one_not_null:
+              config: {tags: ['business_package']}
 
       - name: proveedor_principal
         tests:
           - not_null:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
 
   - name: dim_customers
     columns:
       - name: customer_id
         tests:
           - unique:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
           - not_null:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
 
   - name: dim_parts
     columns:
       - name: part_id
         tests:
           - unique:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
 
   - name: dim_suppliers
     columns:
       - name: supplier_id
         tests:
           - unique:
-              config:
-                tags: ['business_package']
+              config: {tags: ['business_package']}
