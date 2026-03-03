@@ -1,5 +1,5 @@
 with source_lineitems as (
-    select * from {{ source('snowflake_sample', 'lineitem') }}
+    select * from {{ source('snowflake_sample', 'LINEITEM') }}
 )
 
 select

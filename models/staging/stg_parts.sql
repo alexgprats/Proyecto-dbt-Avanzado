@@ -1,5 +1,5 @@
 with source_parts as (
-    select * from {{ source('snowflake_sample', 'part') }}
+    select * from {{ source('snowflake_sample', 'PART') }}
 )
 
 select

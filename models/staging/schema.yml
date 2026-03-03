@@ -13,7 +13,8 @@ models:
         description: "Estado del pedido (F, O, P)"
         tests:
           - accepted_values:
-              values: ['F', 'O', 'P']
+              arguments: # <--- Bloque añadido para compatibilidad
+                values: ['F', 'O', 'P']
 
   - name: stg_customers
     description: "Listado de clientes"
