@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_pedidos_clientes
+    description: "Unión de pedidos con limpieza y agregación de líneas."
+    columns:
+      - name: order_id
+        tests:
+          - unique:
+              config:
+                tags: ['transformation_package']
+          - not_null:
+              config:
+                tags: ['transformation_package']
+      
+      - name: customer_id
+        tests:
+          - not_null:
+              config:
+                tags: ['transformation_package']

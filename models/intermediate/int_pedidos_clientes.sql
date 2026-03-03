@@ -35,9 +35,9 @@ final as (
         c.segment as segmento_cliente,
         o.order_date,
         o.status,
+        o.total_price as importe_bruto, 
         la.total_piezas,
         la.total_proveedores_distintos,
-        la.importe_bruto,
         la.pieza_ejemplo,
         la.proveedor_principal
     from orders o

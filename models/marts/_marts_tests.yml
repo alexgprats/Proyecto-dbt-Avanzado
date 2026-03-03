@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Tabla de hechos central que consolida pedidos con métricas agregadas."
+    columns:
+      - name: order_id
+        tests:
+          - unique:
+              config:
+                tags: ['business_package']
+          - not_null:
+              config:
+                tags: ['business_package']
+
+      - name: customer_id
+        tests:
+          - not_null:
+              config:
+                tags: ['business_package']
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+              config:
+                tags: ['business_package']
+
+      - name: pieza_ejemplo
+        tests:
+          - not_null:
+              config:
+                tags: ['business_package']
+
+      - name: proveedor_principal
+        tests:
+          - not_null:
+              config:
+                tags: ['business_package']
+
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique:
+              config:
+                tags: ['business_package']
+          - not_null:
+              config:
+                tags: ['business_package']
+
+  - name: dim_parts
+    columns:
+      - name: part_id
+        tests:
+          - unique:
+              config:
+                tags: ['business_package']
+
+  - name: dim_suppliers
+    columns:
+      - name: supplier_id
+        tests:
+          - unique:
+              config:
+                tags: ['business_package']

@@ -1,8 +1,0 @@
-version: 2
-
-macros:
-  - name: categorizar_importe
-    description: "Macro que aplica lógica de segmentación de pedidos dependiendo del valor."
-    arguments:
-      - name: columna
-        description: "Campo que contiene el importe bruto."
