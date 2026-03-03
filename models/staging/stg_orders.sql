@@ -4,7 +4,7 @@
 }}
 
 with source_orders as (
-    select * from {{ source('snowflake_sample', 'orders') }}
+    select * from {{ source('snowflake_sample', 'ORDERS') }}
 )
 
 select

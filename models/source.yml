@@ -5,8 +5,8 @@ sources:
     database: SNOWFLAKE_SAMPLE_DATA 
     schema: TPCH_SF1 
     tables:
-      - name: customer
-      - name: orders
-      - name: part
-      - name: lineitem
-      - name: supplier
+      - name: CUSTOMER
+      - name: ORDERS
+      - name: PART
+      - name: LINEITEM
+      - name: SUPPLIER

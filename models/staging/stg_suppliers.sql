@@ -1,5 +1,5 @@
 with source_suppliers as (
-    select * from {{ source('snowflake_sample', 'supplier') }}
+    select * from {{ source('snowflake_sample', 'SUPPLIER') }}
 )
 
 select

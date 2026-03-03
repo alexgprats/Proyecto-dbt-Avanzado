@@ -15,24 +15,27 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_customers')
-              field: customer_id
+              arguments: # <--- Añadido
+                to: ref('dim_customers')
+                field: customer_id
 
       - name: pieza_ejemplo
         description: "Referencia a la pieza principal del pedido."
         tests:
           - not_null
           - relationships:
-              to: ref('dim_parts')
-              field: nombre_pieza 
+              arguments: # <--- Añadido
+                to: ref('dim_parts')
+                field: nombre_pieza 
 
       - name: proveedor_principal
         description: "Referencia al proveedor principal identificado en el pedido."
         tests:
           - not_null
           - relationships:
-              to: ref('dim_suppliers')
-              field: nombre_proveedor 
+              arguments: # <--- Añadido
+                to: ref('dim_suppliers')
+                field: nombre_proveedor
 
       - name: importe_total
         description: "Suma total del precio de todas las líneas del pedido (importe_bruto)."
