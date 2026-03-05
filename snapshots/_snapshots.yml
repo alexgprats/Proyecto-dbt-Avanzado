@@ -1,0 +1,20 @@
+version: 2
+
+snapshots:
+  - name: snp_customers
+    description: "Snapshot de Clientes (Raw): Captura el historial técnico de cambios (SCD Tipo 2) en datos maestros como direcciones y saldos."
+    columns:
+      - name: dbt_scd_id
+        tests: [unique, not_null]
+
+  - name: snp_parts
+    description: "Snapshot de Partes (Raw): Registra variaciones históricas en el catálogo de piezas, especialmente cambios en el precio minorista (retail_price)."
+    columns:
+      - name: dbt_scd_id
+        tests: [unique, not_null]
+
+  - name: snp_suppliers
+    description: "Snapshot de Proveedores (Raw): Mantiene la trazabilidad de los datos de proveedores para auditar cambios en cuentas y ubicaciones."
+    columns:
+      - name: dbt_scd_id
+        tests: [unique, not_null]
