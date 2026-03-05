@@ -3,7 +3,7 @@
 {{
     config(
       target_schema='snapshots',
-      unique_key='id_cliente',
+      unique_key='CUSTOMER_ID',
       strategy='check',
       check_cols=['email', 'nombre_cliente', 'pais'],
     )
