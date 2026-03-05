@@ -9,6 +9,6 @@
     )
 }}
 
-select * from {{ ref('stg_products') }}
+select * from {{ ref('stg_parts') }}
 
 {% endsnapshot %}
