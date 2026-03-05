@@ -2,9 +2,10 @@ version: 2
 
 models:
   - name: fct_orders
-    description: "Tabla de hechos central que consolida pedidos con métricas agregadas."
+    description: "Tabla de hechos central que consolida pedidos con métricas agregadas de negocio."
     columns:
       - name: order_id
+        description: "Identificador único de la orden de compra."
         tests:
           - unique:
               config: {tags: ['business_package']}
@@ -12,6 +13,7 @@ models:
               config: {tags: ['business_package']}
 
       - name: customer_id
+        description: "Llave foránea que conecta con la dimensión de clientes."
         tests:
           - not_null:
               config: {tags: ['business_package']}
@@ -21,6 +23,7 @@ models:
               config: {tags: ['business_package']}
 
       - name: importe_total
+        description: "Monto total bruto de la transacción en la moneda local."
         tests:
           - not_null:
               config: {tags: ['business_package']}
@@ -29,18 +32,22 @@ models:
               config: {tags: ['business_package']}
 
       - name: pieza_ejemplo
+        description: "Nombre o descripción de una de las piezas incluidas en el pedido (vía int_pedidos_clientes)."
         tests:
           - not_null:
               config: {tags: ['business_package']}
 
       - name: proveedor_principal
+        description: "Nombre del proveedor con mayor peso o representación en el pedido."
         tests:
           - not_null:
               config: {tags: ['business_package']}
 
   - name: dim_customers
+    description: "Dimensión maestra de clientes con datos demográficos y de segmentación."
     columns:
       - name: customer_id
+        description: "Llave primaria única del cliente."
         tests:
           - unique:
               config: {tags: ['business_package']}
@@ -48,15 +55,19 @@ models:
               config: {tags: ['business_package']}
 
   - name: dim_parts
+    description: "Catálogo completo de piezas con detalles técnicos y precios de venta."
     columns:
       - name: part_id
+        description: "Identificador único de la pieza o producto."
         tests:
           - unique:
               config: {tags: ['business_package']}
 
   - name: dim_suppliers
+    description: "Directorio de proveedores con información de contacto y balance de cuenta."
     columns:
       - name: supplier_id
+        description: "Identificador único del proveedor."
         tests:
           - unique:
               config: {tags: ['business_package']}
