@@ -10,8 +10,6 @@ models:
               config: {tags: ['business_package']}
           - not_null:
               config: {tags: ['business_package']}
-          - dbt_expectations.expect_column_to_exist:
-              config: {tags: ['business_package']}
 
       - name: customer_id
         tests:

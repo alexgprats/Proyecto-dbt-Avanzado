@@ -1,11 +1,11 @@
-{% snapshot scd_customers %}
+{% snapshot snp_customers %}
 
 {{
     config(
       target_schema='snapshots',
-      unique_key='CUSTOMER_ID',
+      unique_key='customer_id',
       strategy='check',
-      check_cols=['email', 'nombre_cliente', 'pais'],
+      check_cols=['name', 'address', 'phone', 'segment'],
     )
 }}
 
