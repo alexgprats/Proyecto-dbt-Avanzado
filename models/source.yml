@@ -6,8 +6,8 @@ sources:
     schema: TPCH_SF1
     config:
       freshness:
-        warn_after: {count: 24, period: hour}
-        error_after: {count: 48, period: hour}
+        warn_after: {count: 13000, period: day} 
+        error_after: {count: 14000, period: day}
     tables:
       - name: CUSTOMER
         description: "Tabla maestra de clientes de TPC-H."
