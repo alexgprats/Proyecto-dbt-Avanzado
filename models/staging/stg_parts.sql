@@ -11,3 +11,5 @@ select
     p_size as tamano,
     p_retailprice as precio_minorista
 from source_parts
+
+-- cambio comprobar ci
