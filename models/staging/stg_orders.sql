@@ -19,3 +19,5 @@ from source_orders
 {% if is_incremental() %}
   where o_orderdate > (select max(order_date) from {{ this }})
 {% endif %}
+
+-- Comentario para comprobar validación de CI/CD
