@@ -1,12 +1,22 @@
 version: 2
 
 sources:
-  - name: snowflake_sample 
-    database: SNOWFLAKE_SAMPLE_DATA 
-    schema: TPCH_SF1 
+  - name: snowflake_sample
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
     tables:
       - name: CUSTOMER
+        description: "Tabla maestra de clientes de TPC-H."
       - name: ORDERS
+        description: "Registro de pedidos realizados."
+        loaded_at_field: O_ORDERDATE 
       - name: PART
+        description: "Tabla de piezas disponibles."
       - name: LINEITEM
-      - name: SUPPLIER
+        description: "Tabla de ítems de línea en los pedidos."
+      - name: SUPPLIER  
+        description: "Información de proveedores."
