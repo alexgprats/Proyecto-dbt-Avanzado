@@ -1,0 +1,26 @@
+version: 2
+
+tests:
+  - name: assert_total_balance_reconciliation
+    description: "{{ doc('test_reconciliacion_totales') }}"
+    config:
+      severity: error
+      tags: ['finance_audit']
+
+  - name: assert_valid_order_dates
+    description: "{{ doc('test_fechas_validas') }}"
+    config:
+      severity: warn
+      tags: ['data_integrity']
+
+  - name: assert_no_null_customers_in_intermediate
+    description: "{{ doc('test_clientes_huerfanos') }}"
+    config:
+      severity: error
+      tags: ['transformation_package']
+
+  - name: assert_positive_prices_in_orders
+    description: "Valida que no existan precios menores a 1 que no sean exactamente 0."
+    config:
+      severity: error
+      tags: ['data_integrity']
