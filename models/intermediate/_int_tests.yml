@@ -2,19 +2,32 @@ version: 2
 
 models:
   - name: int_pedidos_clientes
-    description: "Unión de pedidos con limpieza y agregación de líneas."
+    description: "{{ doc('int_pedidos_clientes_cleansed') }}" 
     columns:
       - name: order_id
+        description: "ID único del pedido consolidado."
         tests:
-          - unique:
-              config:
-                tags: ['transformation_package']
-          - not_null:
-              config:
-                tags: ['transformation_package']
-      
+          - unique: {config: {tags: ['transformation_package']}}
+          - not_null: {config: {tags: ['transformation_package']}}
       - name: customer_id
+        description: "ID del cliente asociado al pedido."
         tests:
-          - not_null:
-              config:
-                tags: ['transformation_package']
+          - not_null: {config: {tags: ['transformation_package']}}
+      - name: nombre_cliente
+        description: "Nombre del cliente obtenido mediante join con staging customers."
+      - name: segmento_cliente
+        description: "Segmento de mercado del cliente."
+      - name: order_date
+        description: "Fecha original de la orden."
+      - name: status
+        description: "Estado actual del pedido."
+      - name: importe_bruto
+        description: "Precio total acumulado del pedido."
+      - name: total_piezas
+        description: "Conteo total de piezas/ítems incluidos en el pedido."
+      - name: total_proveedores_distintos
+        description: "Número de proveedores diferentes que suministran este pedido."
+      - name: pieza_ejemplo
+        description: "Nombre de una de las piezas del pedido para referencia visual."
+      - name: proveedor_principal
+        description: "Nombre del proveedor con mayor presencia en el pedido."

@@ -2,10 +2,10 @@ version: 2
 
 models:
   - name: fct_orders
-    description: "Tabla de hechos central que consolida pedidos con métricas agregadas de negocio."
+    description: "{{ doc('fct_orders_cleansed') }}"
     columns:
       - name: order_id
-        description: "Identificador único de la orden de compra."
+        description: "Identificador único de la orden de compra (PK)."
         tests:
           - unique:
               config: {tags: ['business_package']}
@@ -13,61 +13,108 @@ models:
               config: {tags: ['business_package']}
 
       - name: customer_id
-        description: "Llave foránea que conecta con la dimensión de clientes."
+        description: "Llave foránea que conecta con la dimensión de clientes (FK)."
         tests:
           - not_null:
               config: {tags: ['business_package']}
           - relationships:
-              to: ref('dim_customers')
-              field: customer_id
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
               config: {tags: ['business_package']}
 
+      - name: nombre_cliente
+        description: "Nombre del cliente consolidado para facilitar el reporte directo."
+
+      - name: segmento_cliente
+        description: "Segmento de mercado del cliente asociado al pedido."
+
+      - name: order_date
+        description: "Fecha en la que se realizó el pedido."
+
+      - name: estado_pedido
+        description: "Estado actual de la orden (O: Open, F: Finished, P: Pending)."
+
       - name: importe_total
-        description: "Monto total bruto de la transacción en la moneda local."
+        description: "Monto total bruto de la transacción en moneda local."
         tests:
           - not_null:
               config: {tags: ['business_package']}
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
+              arguments: 
+                min_value: 0
               config: {tags: ['business_package']}
 
+      - name: categoria_venta
+        description: "Clasificación del importe calculada mediante la macro categorizar_importe."
+
+      - name: total_piezas
+        description: "Cantidad total de artículos contenidos en el pedido."
+
+      - name: total_proveedores_distintos
+        description: "Número de proveedores únicos que participan en el pedido."
+
       - name: pieza_ejemplo
-        description: "Nombre o descripción de una de las piezas incluidas en el pedido (vía int_pedidos_clientes)."
+        description: "Nombre de una pieza representativa incluida en el pedido."
         tests:
           - not_null:
               config: {tags: ['business_package']}
 
       - name: proveedor_principal
-        description: "Nombre del proveedor con mayor peso o representación en el pedido."
+        description: "Nombre del proveedor con mayor relevancia en este pedido."
         tests:
           - not_null:
               config: {tags: ['business_package']}
 
   - name: dim_customers
-    description: "Dimensión maestra de clientes con datos demográficos y de segmentación."
+    description: "{{ doc('dim_customers_cleansed') }}"
     columns:
       - name: customer_id
         description: "Llave primaria única del cliente."
         tests:
-          - unique:
-              config: {tags: ['business_package']}
-          - not_null:
-              config: {tags: ['business_package']}
+          - unique: {config: {tags: ['business_package']}}
+          - not_null: {config: {tags: ['business_package']}}
+      - name: nombre_cliente
+        description: "Nombre completo o razón social del cliente."
+      - name: segmento_mercado
+        description: "Categorización comercial del cliente (ej. AUTOMOBILE, BUILDING)."
+      - name: direccion_formateada
+        description: "Dirección del cliente normalizada en mayúsculas."
 
   - name: dim_parts
-    description: "Catálogo completo de piezas con detalles técnicos y precios de venta."
+    description: "{{ doc('dim_parts_cleansed') }}"
     columns:
       - name: part_id
         description: "Identificador único de la pieza o producto."
         tests:
-          - unique:
-              config: {tags: ['business_package']}
+          - unique: {config: {tags: ['business_package']}}
+          - not_null: {config: {tags: ['business_package']}}
+      - name: nombre_pieza
+        description: "Nombre descriptivo del artículo."
+      - name: fabricante
+        description: "Nombre de la empresa manufacturera."
+      - name: marca
+        description: "Marca comercial del producto."
+      - name: tipo_pieza
+        description: "Categoría técnica de la pieza."
+      - name: tamano
+        description: "Dimensiones o talla de la pieza."
+      - name: precio_minorista
+        description: "Precio de venta al público recomendado."
 
   - name: dim_suppliers
-    description: "Directorio de proveedores con información de contacto y balance de cuenta."
+    description: "{{ doc('dim_suppliers_cleansed') }}"
     columns:
       - name: supplier_id
         description: "Identificador único del proveedor."
         tests:
-          - unique:
-              config: {tags: ['business_package']}
+          - unique: {config: {tags: ['business_package']}}
+          - not_null: {config: {tags: ['business_package']}}
+      - name: nombre_proveedor
+        description: "Nombre legal de la entidad proveedora."
+      - name: direccion
+        description: "Ubicación física del proveedor."
+      - name: telefono
+        description: "Número de contacto principal."
+      - name: balance_cuenta
+        description: "Saldo pendiente o crédito disponible con el proveedor."

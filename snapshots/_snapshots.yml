@@ -2,19 +2,76 @@ version: 2
 
 snapshots:
   - name: snp_customers
-    description: "Snapshot de Clientes (Raw): Captura el historial técnico de cambios (SCD Tipo 2) en datos maestros como direcciones y saldos."
+    description: "{{ doc('snp_customers_cleansed') }}"
     columns:
       - name: dbt_scd_id
+        description: "Clave primaria única generada por dbt."
         tests: [unique, not_null]
+      - name: dbt_updated_at
+        description: "Fecha de actualización técnica."
+      - name: dbt_valid_from
+        description: "Inicio de vigencia del registro."
+      - name: dbt_valid_to
+        description: "Fin de vigencia del registro."
+      - name: customer_id
+        description: "ID natural del cliente."
+      - name: name
+        description: "Nombre del cliente."
+      - name: address
+        description: "Dirección física."
+      - name: nation_id
+        description: "Identificador de nación (heredado de stg_customers)."
+      - name: phone
+        description: "Teléfono de contacto."
+      - name: segment
+        description: "Segmento de mercado."
 
   - name: snp_parts
-    description: "Snapshot de Partes (Raw): Registra variaciones históricas en el catálogo de piezas, especialmente cambios en el precio minorista (retail_price)."
+    description: "{{ doc('snp_parts_cleansed') }}"
     columns:
       - name: dbt_scd_id
+        description: "ID de versión técnica de la pieza."
         tests: [unique, not_null]
+      - name: dbt_updated_at
+        description: "Fecha técnica de actualización."
+      - name: dbt_valid_from
+        description: "Inicio de vigencia."
+      - name: dbt_valid_to
+        description: "Fin de vigencia."
+      - name: part_id
+        description: "ID de la pieza."
+      - name: nombre_pieza
+        description: "Nombre del producto."
+      - name: fabricante
+        description: "Empresa fabricante."
+      - name: marca
+        description: "Marca comercial de la pieza."
+      - name: tipo_pieza
+        description: "Tipo o categoría técnica."
+      - name: tamano
+        description: "Tamaño o dimensiones."
+      - name: precio_minorista
+        description: "Precio de venta capturado."
 
   - name: snp_suppliers
-    description: "Snapshot de Proveedores (Raw): Mantiene la trazabilidad de los datos de proveedores para auditar cambios en cuentas y ubicaciones."
+    description: "{{ doc('snp_suppliers_cleansed') }}"
     columns:
       - name: dbt_scd_id
+        description: "Hash único de la versión del proveedor."
         tests: [unique, not_null]
+      - name: dbt_updated_at
+        description: "Fecha de actualización detectada."
+      - name: dbt_valid_from
+        description: "Fecha desde la que el registro es válido."
+      - name: dbt_valid_to
+        description: "Fecha hasta la que el registro fue válido."
+      - name: supplier_id
+        description: "ID único del proveedor."
+      - name: nombre_proveedor
+        description: "Nombre legal."
+      - name: direccion
+        description: "Dirección registrada."
+      - name: telefono
+        description: "Teléfono de contacto."
+      - name: balance_cuenta
+        description: "Saldo de cuenta capturado."

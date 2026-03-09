@@ -2,71 +2,108 @@ version: 2
 
 models:
   - name: stg_orders
-    description: "Tabla incremental con los pedidos base de Snowflake"
+    description: "{{ doc('stg_orders_cleansed') }}"
     columns:
       - name: order_id
-        description: "Clave primaria del pedido"
+        description: "Clave primaria única del pedido."
         tests:
-          - unique:
-              config:
-                tags: ['staging_package']
-          - not_null:
-              config:
-                tags: ['staging_package']
+          - unique: {config: {tags: ['staging_package']}}
+          - not_null: {config: {tags: ['staging_package']}}
+      - name: customer_id
+        description: "Clave foránea del cliente que realizó la compra."
       - name: status
-        description: "Estado del pedido (F, O, P)"
+        description: "Estado del pedido (F: Finished, O: Open, P: Pending)."
         tests:
           - accepted_values:
-              values: ['F', 'O', 'P']
-              config:
-                tags: ['staging_package']
+              arguments:
+                values: ['F', 'O', 'P']
+                config: {tags: ['staging_package']}
+      - name: total_price
+        description: "Importe bruto total del pedido."
+      - name: order_date
+        description: "Fecha de registro de la orden."
+      - name: priority
+        description: "Prioridad asignada al pedido."
 
   - name: stg_customers
-    description: "Listado de clientes"
+    description: "{{ doc('stg_customers_cleansed') }}"
     columns:
       - name: customer_id
+        description: "Clave primaria del cliente."
         tests:
-          - unique:
-              config:
-                tags: ['staging_package']
-          - not_null:
-              config:
-                tags: ['staging_package']
-    
+          - unique: {config: {tags: ['staging_package']}}
+          - not_null: {config: {tags: ['staging_package']}}
+      - name: name
+        description: "Nombre completo del cliente."
+      - name: address
+        description: "Dirección física registrada."
+      - name: nation_id
+        description: "Referencia geográfica del país."
+      - name: phone
+        description: "Teléfono de contacto."
+      - name: segment
+        description: "Segmento de mercado al que pertenece."
+
   - name: stg_lineitems
-    description: "Detalle de cada línea de pedido"
+    description: "{{ doc('stg_lineitems_cleansed') }}"
     columns:
       - name: order_id
+        description: "Referencia al pedido principal."
         tests:
-          - not_null:
-              config:
-                tags: ['staging_package']
+          - not_null: {config: {tags: ['staging_package']}}
       - name: part_id
+        description: "Referencia a la pieza vendida."
         tests:
-          - not_null:
-              config:
-                tags: ['staging_package']
+          - not_null: {config: {tags: ['staging_package']}}
+      - name: supplier_id
+        description: "Referencia al proveedor de la pieza."
+      - name: linea_numero
+        description: "Número correlativo de la línea dentro del pedido."
+      - name: cantidad
+        description: "Unidades vendidas."
+      - name: precio_extendido
+        description: "Precio total de la línea antes de descuentos."
+      - name: descuento
+        description: "Porcentaje de descuento aplicado."
+      - name: impuesto
+        description: "Porcentaje de impuesto aplicado."
+      - name: fecha_envio
+        description: "Fecha en la que el producto salió del almacén."
 
   - name: stg_parts
-    description: "Maestro de piezas/productos"
+    description: "{{ doc('stg_parts_cleansed') }}"
     columns:
       - name: part_id
+        description: "Clave primaria de la pieza."
         tests:
-          - unique:
-              config:
-                tags: ['staging_package']
-          - not_null:
-              config:
-                tags: ['staging_package']
+          - unique: {config: {tags: ['staging_package']}}
+          - not_null: {config: {tags: ['staging_package']}}
+      - name: nombre_pieza
+        description: "Nombre del producto."
+      - name: fabricante
+        description: "Entidad que produce la pieza."
+      - name: marca
+        description: "Marca comercial."
+      - name: tipo_pieza
+        description: "Categoría técnica del producto."
+      - name: tamano
+        description: "Tamaño o volumen de la pieza."
+      - name: precio_minorista
+        description: "Precio de venta recomendado."
 
   - name: stg_suppliers
-    description: "Maestro de proveedores"
+    description: "{{ doc('stg_suppliers_cleansed') }}"
     columns:
       - name: supplier_id
+        description: "Clave primaria del proveedor."
         tests:
-          - unique:
-              config:
-                tags: ['staging_package']
-          - not_null:
-              config:
-                tags: ['staging_package']
+          - unique: {config: {tags: ['staging_package']}}
+          - not_null: {config: {tags: ['staging_package']}}
+      - name: nombre_proveedor
+        description: "Nombre legal del proveedor."
+      - name: direccion
+        description: "Ubicación del proveedor."
+      - name: telefono
+        description: "Contacto telefónico."
+      - name: balance_cuenta
+        description: "Saldo contable acumulado."

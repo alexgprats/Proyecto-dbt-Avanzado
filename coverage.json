@@ -1,219 +1,10 @@
 {
   "cov_type": "doc",
-  "hits": 2,
-  "covered": 2,
-  "total": 123,
-  "coverage": 0.016260162601626018,
+  "hits": 102,
+  "covered": 102,
+  "total": 151,
+  "coverage": 0.6754966887417219,
   "tables": [
-    {
-      "name": "tpch_sf1.part",
-      "hits": 0,
-      "covered": 0,
-      "total": 9,
-      "coverage": 0.0,
-      "columns": [
-        {
-          "name": "p_partkey",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_name",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_mfgr",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_brand",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_type",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_size",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_container",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_retailprice",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "p_comment",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        }
-      ]
-    },
-    {
-      "name": "tpch_sf1.orders",
-      "hits": 0,
-      "covered": 0,
-      "total": 9,
-      "coverage": 0.0,
-      "columns": [
-        {
-          "name": "o_orderkey",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_custkey",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_orderstatus",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_totalprice",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_orderdate",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_orderpriority",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_clerk",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_shippriority",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "o_comment",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        }
-      ]
-    },
-    {
-      "name": "tpch_sf1.customer",
-      "hits": 0,
-      "covered": 0,
-      "total": 8,
-      "coverage": 0.0,
-      "columns": [
-        {
-          "name": "c_custkey",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_name",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_address",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_nationkey",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_phone",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_acctbal",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_mktsegment",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "c_comment",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        }
-      ]
-    },
     {
       "name": "tpch_sf1.supplier",
       "hits": 0,
@@ -394,70 +185,207 @@
       ]
     },
     {
-      "name": "snapshots.snp_suppliers",
+      "name": "tpch_sf1.part",
       "hits": 0,
       "covered": 0,
       "total": 9,
       "coverage": 0.0,
       "columns": [
         {
-          "name": "supplier_id",
+          "name": "p_partkey",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "nombre_proveedor",
+          "name": "p_name",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "direccion",
+          "name": "p_mfgr",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "telefono",
+          "name": "p_brand",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "balance_cuenta",
+          "name": "p_type",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "dbt_scd_id",
+          "name": "p_size",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "dbt_updated_at",
+          "name": "p_container",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "dbt_valid_from",
+          "name": "p_retailprice",
           "hits": 0,
           "covered": 0,
           "total": 1,
           "coverage": 0.0
         },
         {
-          "name": "dbt_valid_to",
+          "name": "p_comment",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "name": "tpch_sf1.customer",
+      "hits": 0,
+      "covered": 0,
+      "total": 8,
+      "coverage": 0.0,
+      "columns": [
+        {
+          "name": "c_custkey",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_name",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_address",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_nationkey",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_phone",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_acctbal",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_mktsegment",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "c_comment",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "name": "tpch_sf1.orders",
+      "hits": 0,
+      "covered": 0,
+      "total": 9,
+      "coverage": 0.0,
+      "columns": [
+        {
+          "name": "o_orderkey",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_custkey",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_orderstatus",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_totalprice",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_orderdate",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_orderpriority",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_clerk",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_shippriority",
+          "hits": 0,
+          "covered": 0,
+          "total": 1,
+          "coverage": 0.0
+        },
+        {
+          "name": "o_comment",
           "hits": 0,
           "covered": 0,
           "total": 1,
@@ -467,54 +395,54 @@
     },
     {
       "name": "alex_schema.stg_suppliers",
-      "hits": 0,
-      "covered": 0,
+      "hits": 5,
+      "covered": 5,
       "total": 5,
-      "coverage": 0.0,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "supplier_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "nombre_proveedor",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "direccion",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "telefono",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "balance_cuenta",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         }
       ]
     },
     {
       "name": "alex_schema.stg_orders",
-      "hits": 2,
-      "covered": 2,
+      "hits": 6,
+      "covered": 6,
       "total": 6,
-      "coverage": 0.3333333333333333,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "order_id",
@@ -525,10 +453,10 @@
         },
         {
           "name": "customer_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "status",
@@ -539,456 +467,760 @@
         },
         {
           "name": "total_price",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "order_date",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "priority",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         }
       ]
     },
     {
-      "name": "alex_schema.stg_lineitems",
-      "hits": 0,
-      "covered": 0,
-      "total": 9,
-      "coverage": 0.0,
+      "name": "alex_schema.fct_orders",
+      "hits": 12,
+      "covered": 12,
+      "total": 12,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "order_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "part_id",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "supplier_id",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "linea_numero",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "cantidad",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "precio_extendido",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "descuento",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "impuesto",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        },
-        {
-          "name": "fecha_envio",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
-        }
-      ]
-    },
-    {
-      "name": "alex_schema.int_pedidos_clientes",
-      "hits": 0,
-      "covered": 0,
-      "total": 11,
-      "coverage": 0.0,
-      "columns": [
-        {
-          "name": "order_id",
-          "hits": 0,
-          "covered": 0,
-          "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "customer_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "nombre_cliente",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "segmento_cliente",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "order_date",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "status",
-          "hits": 0,
-          "covered": 0,
+          "name": "estado_pedido",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "importe_bruto",
-          "hits": 0,
-          "covered": 0,
+          "name": "importe_total",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        },
+        {
+          "name": "categoria_venta",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         },
         {
           "name": "total_piezas",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "total_proveedores_distintos",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "pieza_ejemplo",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "proveedor_principal",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "alex_schema.dim_suppliers",
+      "hits": 5,
+      "covered": 5,
+      "total": 5,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "supplier_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "nombre_proveedor",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "direccion",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "telefono",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "balance_cuenta",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         }
       ]
     },
     {
       "name": "snapshots.snp_parts",
-      "hits": 0,
-      "covered": 0,
+      "hits": 11,
+      "covered": 11,
       "total": 11,
-      "coverage": 0.0,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "part_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "nombre_pieza",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "fabricante",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "marca",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "tipo_pieza",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "tamano",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "precio_minorista",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_scd_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_updated_at",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_valid_from",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_valid_to",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         }
       ]
     },
     {
-      "name": "alex_schema.stg_customers",
-      "hits": 0,
-      "covered": 0,
-      "total": 6,
-      "coverage": 0.0,
+      "name": "alex_schema.int_pedidos_clientes",
+      "hits": 11,
+      "covered": 11,
+      "total": 11,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "order_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "customer_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "nombre_cliente",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "segmento_cliente",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "order_date",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "status",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "importe_bruto",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "total_piezas",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "total_proveedores_distintos",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "pieza_ejemplo",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "proveedor_principal",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "alex_schema.dim_customers",
+      "hits": 4,
+      "covered": 4,
+      "total": 4,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "customer_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "name",
-          "hits": 0,
-          "covered": 0,
+          "name": "nombre_cliente",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "address",
-          "hits": 0,
-          "covered": 0,
+          "name": "segmento_mercado",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "nation_id",
-          "hits": 0,
-          "covered": 0,
+          "name": "direccion_formateada",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "snapshots.snp_suppliers",
+      "hits": 9,
+      "covered": 9,
+      "total": 9,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "supplier_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         },
         {
-          "name": "phone",
-          "hits": 0,
-          "covered": 0,
+          "name": "nombre_proveedor",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
-          "name": "segment",
-          "hits": 0,
-          "covered": 0,
+          "name": "direccion",
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        },
+        {
+          "name": "telefono",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "balance_cuenta",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "dbt_scd_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "dbt_updated_at",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "dbt_valid_from",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "dbt_valid_to",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "alex_schema.dim_parts",
+      "hits": 7,
+      "covered": 7,
+      "total": 7,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "part_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "nombre_pieza",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "fabricante",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "marca",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "tipo_pieza",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "tamano",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "precio_minorista",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         }
       ]
     },
     {
       "name": "snapshots.snp_customers",
-      "hits": 0,
-      "covered": 0,
+      "hits": 10,
+      "covered": 10,
       "total": 10,
-      "coverage": 0.0,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "customer_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "name",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "address",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "nation_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "phone",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "segment",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_scd_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_updated_at",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_valid_from",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "dbt_valid_to",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "alex_schema.stg_customers",
+      "hits": 6,
+      "covered": 6,
+      "total": 6,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "customer_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "name",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "address",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "nation_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "phone",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "segment",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         }
       ]
     },
     {
       "name": "alex_schema.stg_parts",
-      "hits": 0,
-      "covered": 0,
+      "hits": 7,
+      "covered": 7,
       "total": 7,
-      "coverage": 0.0,
+      "coverage": 1.0,
       "columns": [
         {
           "name": "part_id",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "nombre_pieza",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "fabricante",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "marca",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "tipo_pieza",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "tamano",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
         },
         {
           "name": "precio_minorista",
-          "hits": 0,
-          "covered": 0,
+          "hits": 1,
+          "covered": 1,
           "total": 1,
-          "coverage": 0.0
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "name": "alex_schema.stg_lineitems",
+      "hits": 9,
+      "covered": 9,
+      "total": 9,
+      "coverage": 1.0,
+      "columns": [
+        {
+          "name": "order_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "part_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "supplier_id",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "linea_numero",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "cantidad",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "precio_extendido",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "descuento",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "impuesto",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
+        },
+        {
+          "name": "fecha_envio",
+          "hits": 1,
+          "covered": 1,
+          "total": 1,
+          "coverage": 1.0
         }
       ]
     }
