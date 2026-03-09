@@ -4,20 +4,31 @@ sources:
   - name: snowflake_sample
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
-    config:
-      freshness:
-        warn_after: {count: 13000, period: day} 
-        error_after: {count: 14000, period: day}
+    # La frescura se define directamente, sin la palabra 'config'
+    freshness:
+      warn_after: {count: 13000, period: day} 
+      error_after: {count: 14000, period: day}
+    
+    # IMPORTANTE: dbt necesita saber qué columna mirar para TODAS las tablas 
+    # o específicamente para la que quieras medir. 
+    # Como ORDERS es la que tiene la fecha clara, la configuramos abajo:
+
     tables:
       - name: CUSTOMER
         description: "Tabla maestra de clientes de TPC-H."
+
       - name: ORDERS
         description: "Registro de pedidos realizados."
-        config:
-          loaded_at_field: O_ORDERDATE 
+        loaded_at_field: O_ORDERDATE::timestamp 
+        freshness:
+          warn_after: {count: 13000, period: day}
+          error_after: {count: 14000, period: day}
+
       - name: PART
         description: "Tabla de piezas disponibles."
+
       - name: LINEITEM
         description: "Tabla de ítems de línea en los pedidos."
+
       - name: SUPPLIER  
         description: "Información de proveedores."
